@@ -51,3 +51,11 @@ ENV/
 ._*
 Thumbs.db
 desktop.ini
+
+
+# --- MkDocs ---
+site/
+*/__pycache__/
+*.pyc
+
+ML*
