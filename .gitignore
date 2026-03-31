@@ -21,8 +21,7 @@ share/python-wheels/
 *.egg
 MANIFEST
 
-# --- Virtual Environments (The "box") ---
-# We ignore these because others should create their own using your requirements.txt
+# --- Venv ---
 env/
 venv/
 ENV/
@@ -38,12 +37,13 @@ ENV/
 .nteract_scripts/
 
 # --- Machine Learning & Data ---
-# Ignore the actual .pickle data files (usually too large for Git)
 *.pickle
 *.pkl
 *.npy
 *.csv
 *.tsv
+!src/*.csv
+!src/*.pickle
 
 # --- OS Specific ---
 .DS_Store
@@ -58,4 +58,4 @@ site/
 */__pycache__/
 *.pyc
 
-ML*
+*.zip
