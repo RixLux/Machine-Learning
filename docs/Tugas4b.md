@@ -63,3 +63,5 @@ Tujuan utama dari kode ini adalah **membuat alat pendukung keputusan** bagi sekt
 ---
 
 ![Images/Tugas4/Output_Analisis_Padi1.png](Images/Tugas4/Output_Analisis_Padi5.png)
+
+![Images](Images/Tugas4/Output_Analisis_Padi5.png)
