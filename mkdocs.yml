@@ -39,6 +39,7 @@ nav:
   - Tugas4a: Tugas4a.md
   - Tugas4b: Tugas4b.md
   - Tugas6: Tugas6.md
+  - Tugas10b: Tugas10b.md
 
 markdown_extensions:
   - admonition
