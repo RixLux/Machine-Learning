@@ -27,6 +27,7 @@ venv/
 ENV/
 .env
 .venv
+tf_env/
 
 # --- Jupyter Notebook Specific ---
 .ipynb_checkpoints
@@ -63,3 +64,7 @@ site/
 # etc
 
 *.idea
+
+#Personal script and stuff
+*.sh
+*.pdf
