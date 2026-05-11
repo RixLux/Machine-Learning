@@ -1,0 +1,2006 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Documentation">
+      
+      
+      
+        <link rel="canonical" href="https://rixlux.github.io/Machine-Learning/Tugas12_Jobsheet/">
+      
+      
+        <link rel="prev" href="../Tugas12/">
+      
+      
+        <link rel="next" href="../jobsheet11-CNNwithMAtLab/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Tugas12 Jobsheet - Machine-Learning Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#sistem-rekomendasi-destinasi-wisata-kota-bandung-berbasis-collaborative-filtering" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Machine-Learning Documentation" class="md-header__button md-logo" aria-label="Machine-Learning Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Machine-Learning Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Tugas12 Jobsheet
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="blue"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/RixLux/Machine-Learning" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RixLux/Machine-Learning
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Tugas4a/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tugas4a
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Tugas4b/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tugas4b
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Tugas6/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tugas6
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Tugas10b/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tugas10b
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Tugas11/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tugas11
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Tugas12/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tugas12
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Tugas12 Jobsheet
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../jobsheet11-CNNwithMAtLab/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Jobsheet11 CNNwithMAtLab
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Machine-Learning Documentation" class="md-nav__button md-logo" aria-label="Machine-Learning Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Machine-Learning Documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/RixLux/Machine-Learning" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    RixLux/Machine-Learning
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tugas4a/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tugas4a
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tugas4b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tugas4b
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tugas6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tugas6
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tugas10b/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tugas10b
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tugas11/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tugas11
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Tugas12/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tugas12
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tugas12 Jobsheet
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tugas12 Jobsheet
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pendahuluan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pendahuluan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-mengimpor-library-python-yang-dibutuhkan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Mengimpor Library Python yang Dibutuhkan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-menyiapkan-dataset-yang-digunakan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Menyiapkan Dataset yang digunakan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Data Understanding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-menyiapkan-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Menyiapkan Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-eksplorasi-fitur-fitur-pada-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Eksplorasi Fitur-fitur pada Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Eksplorasi Fitur-fitur pada Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-data-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1. Data place
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-data-rating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2. Data rating
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-data-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3. Data user
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-eksplorasi-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Eksplorasi Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-persiapan-data-untuk-pemodelan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Persiapan Data untuk Pemodelan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Persiapan Data untuk Pemodelan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-membuat-salinan-data-rating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Membuat Salinan Data rating
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-melakukan-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Melakukan Encoding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Melakukan Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-membuat-fungsi-untuk-melakukan-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1. Membuat Fungsi untuk Melakukan Encoding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-encoding-dan-mapping-kolom-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2. Encoding dan Mapping Kolom User
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-encoding-dan-mapping-kolom-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.3. Encoding dan Mapping Kolom Place
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-melihat-gambaran-data-untuk-pemodelan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. Melihat Gambaran Data untuk Pemodelan
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-pemodelan-machine-learning-dengan-recommendernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Pemodelan Machine Learning dengan RecommenderNet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Pemodelan Machine Learning dengan RecommenderNet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-membagi-data-train-dan-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Membagi data train dan test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-menyiapkan-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Menyiapkan Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2. Menyiapkan Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-inisialisasi-fungsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.1. Inisialisasi Fungsi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-inisialisasi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.2. Inisialisasi Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-inisialisasi-callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.3. Inisialisasi Callbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#624-proses-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.4. Proses Training
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-memprediksi-top-7-rekomendasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Memprediksi Top 7 Rekomendasi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Memprediksi Top 7 Rekomendasi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-menyiapkan-dataframe-untuk-menampilkan-hasil-rekomendasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Menyiapkan DataFrame untuk Menampilkan Hasil Rekomendasi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-menyiapkan-contoh-user-untuk-menampilkan-rekomendasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2. Menyiapkan contoh User untuk Menampilkan Rekomendasi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2. Menyiapkan contoh User untuk Menampilkan Rekomendasi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-mencari-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.1 Mencari User
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-mencari-lokasi-yang-belum-dikunjungi-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.2. Mencari Lokasi yang belum Dikunjungi User
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-menampilkan-hasil-rekomendasi-untuk-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3. Menampilkan Hasil Rekomendasi untuk User
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#penutup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Penutup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referensi
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../jobsheet11-CNNwithMAtLab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Jobsheet11 CNNwithMAtLab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pendahuluan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pendahuluan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-mengimpor-library-python-yang-dibutuhkan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Mengimpor Library Python yang Dibutuhkan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-menyiapkan-dataset-yang-digunakan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Menyiapkan Dataset yang digunakan
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-data-understanding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Data Understanding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Data Understanding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-menyiapkan-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 Menyiapkan Data
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-eksplorasi-fitur-fitur-pada-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 Eksplorasi Fitur-fitur pada Data
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.2 Eksplorasi Fitur-fitur pada Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#321-data-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.1. Data place
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#322-data-rating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.2. Data rating
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#323-data-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2.3. Data user
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-eksplorasi-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Eksplorasi Data
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-persiapan-data-untuk-pemodelan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Persiapan Data untuk Pemodelan
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Persiapan Data untuk Pemodelan">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-membuat-salinan-data-rating" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1. Membuat Salinan Data rating
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-melakukan-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2. Melakukan Encoding
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.2. Melakukan Encoding">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#521-membuat-fungsi-untuk-melakukan-encoding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.1. Membuat Fungsi untuk Melakukan Encoding
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#522-encoding-dan-mapping-kolom-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.2. Encoding dan Mapping Kolom User
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#523-encoding-dan-mapping-kolom-place" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2.3. Encoding dan Mapping Kolom Place
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-melihat-gambaran-data-untuk-pemodelan" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3. Melihat Gambaran Data untuk Pemodelan
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-pemodelan-machine-learning-dengan-recommendernet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Pemodelan Machine Learning dengan RecommenderNet
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6. Pemodelan Machine Learning dengan RecommenderNet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61-membagi-data-train-dan-test" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1. Membagi data train dan test
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62-menyiapkan-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2. Menyiapkan Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6.2. Menyiapkan Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#621-inisialisasi-fungsi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.1. Inisialisasi Fungsi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#622-inisialisasi-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.2. Inisialisasi Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#623-inisialisasi-callbacks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.3. Inisialisasi Callbacks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#624-proses-training" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2.4. Proses Training
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-memprediksi-top-7-rekomendasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Memprediksi Top 7 Rekomendasi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Memprediksi Top 7 Rekomendasi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#71-menyiapkan-dataframe-untuk-menampilkan-hasil-rekomendasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.1 Menyiapkan DataFrame untuk Menampilkan Hasil Rekomendasi
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#72-menyiapkan-contoh-user-untuk-menampilkan-rekomendasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2. Menyiapkan contoh User untuk Menampilkan Rekomendasi
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7.2. Menyiapkan contoh User untuk Menampilkan Rekomendasi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#721-mencari-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.1 Mencari User
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#722-mencari-lokasi-yang-belum-dikunjungi-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.2.2. Mencari Lokasi yang belum Dikunjungi User
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#73-menampilkan-hasil-rekomendasi-untuk-user" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7.3. Menampilkan Hasil Rekomendasi untuk User
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#penutup" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Penutup
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referensi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referensi
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="sistem-rekomendasi-destinasi-wisata-kota-bandung-berbasis-collaborative-filtering">Sistem Rekomendasi Destinasi Wisata Kota Bandung Berbasis Collaborative Filtering</h1>
+<h2 id="pendahuluan">Pendahuluan</h2>
+<p>Sebelum bepergian, biasanya seseorang akan membuat rencana terlebih dahulu tentang lokasi yang akan dikunjungi dan waktu keberangkatannya. Hal ini dilakukan untuk perencanaan sebelum berwisata ke suatu Kota.</p>
+<p>Kota Bandung memiliki daya tarik wisata yang cukup tinggi, namun dikutip dari humas.bandung.go.id/ jumlah wisatawan ke Kota Bandung turun 50% pada tahun 2021. Tentunya angka ini wajar karena penyebaran Covid-19 yang mengkhawatirkan di Indonesia.</p>
+<p>Untuk periode Oktober 2021, sejumlah wisata di Kota Bandung sudah mulai beroperasi, ini akan menjadi momentum yang tepat untuk menggerakkan pariwisata kembali.</p>
+<p>Pada projek ini, saya akan membuat sebuah sistem rekomendasi berbasis collaborative filtering untuk menampilkan top-n recommendation destinasi wisata di Kota Bandung berdasarkan data user, rating, dan place.</p>
+<h2 id="1-mengimpor-library-python-yang-dibutuhkan">1. Mengimpor Library Python yang Dibutuhkan</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Untuk pengolahan data</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">zipfile</span><span class="w"> </span><span class="kn">import</span> <span class="n">ZipFile</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pathlib</span><span class="w"> </span><span class="kn">import</span> <span class="n">Path</span>
+
+<span class="c1"># Untuk visualisasi data</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="o">%</span><span class="n">matplotlib</span> <span class="n">inline</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set_palette</span><span class="p">(</span><span class="s1">&#39;Set1&#39;</span><span class="p">)</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+
+<span class="c1"># Untuk pemodelan</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">tf</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow</span><span class="w"> </span><span class="kn">import</span> <span class="n">keras</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">tensorflow.keras</span><span class="w"> </span><span class="kn">import</span> <span class="n">layers</span>
+
+<span class="c1"># Untuk menghilangkan warnings saat plotting seaborn</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">warnings</span>
+<span class="n">warnings</span><span class="o">.</span><span class="n">filterwarnings</span><span class="p">(</span><span class="s1">&#39;ignore&#39;</span><span class="p">)</span>
+
+<span class="c1"># Untuk mengupload file</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">os</span>
+</code></pre></div>
+<p><strong>J.62DMI00.001.1 - Mengumpulkan Data</strong></p>
+<h2 id="2-menyiapkan-dataset-yang-digunakan">2. Menyiapkan Dataset yang digunakan</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Upload semua dataset yang dipakai</span>
+<span class="k">for</span> <span class="n">dirname</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">filenames</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="s1">&#39;/content&#39;</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">dirname</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
+</code></pre></div>
+<p><strong>Keterangan:</strong></p>
+<ul>
+<li><code>tourism_with_id.csv</code> - mengandung informasi tempat wisata di 5 kota besar di Indonesia (hanya kota Bandung yang dipakai)</li>
+<li><code>user.csv</code> - mengandung informasi pengguna untuk membuat rekomendasi fitur berdasar pengguna</li>
+<li><code>tourism_rating.csv</code> - mengandung informasi pengguna, tempat wisata, dan rating untuk membuat sistem rekomendasi berdasar rating</li>
+</ul>
+<h2 id="3-data-understanding">3. Data Understanding</h2>
+<h3 id="31-menyiapkan-data">3.1 Menyiapkan Data</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Menyimpan masing-masing dataset kedalam variabel</span>
+<span class="n">rating</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/tourism_rating.csv&#39;</span><span class="p">)</span>
+<span class="n">place</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/tourism_with_id.csv&#39;</span><span class="p">)</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/user.csv&#39;</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>J.62DMI00.010.1 - Menentukan Label Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">rating</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">place</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">user</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="32-eksplorasi-fitur-fitur-pada-data">3.2 Eksplorasi Fitur-fitur pada Data</h3>
+<h4 id="321-data-place">3.2.1. Data place</h4>
+<p><strong>J.62DMI00.007.1 - Menentukan Objek Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Melihat gambaran data place</span>
+<span class="n">place</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Membuang kolom yang tidak dipakai</span>
+<span class="n">place</span> <span class="o">=</span> <span class="n">place</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s1">&#39;Unnamed: 11&#39;</span><span class="p">,</span> <span class="s1">&#39;Unnamed: 12&#39;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">place</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Merubah data agar hanya dari Kota Bandung</span>
+<span class="n">place</span> <span class="o">=</span> <span class="n">place</span><span class="p">[</span><span class="n">place</span><span class="p">[</span><span class="s1">&#39;City&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;Bandung&#39;</span><span class="p">]</span>
+<span class="n">place</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>J.62DMI00.005.1 - Menelaah Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">place</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>J.62DMI00.008.1 - Membersihkan Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Membuang kolom yang tidak dipakai lagi</span>
+<span class="n">place</span> <span class="o">=</span> <span class="n">place</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Time_Minutes&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+<p><strong>J.62DMI00.006.1 - Memvalidasi Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">place</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</code></pre></div>
+<h4 id="322-data-rating">3.2.2. Data rating</h4>
+<p><strong>J.62DMI00.007.1 - Menentukan Objek Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># melihat gambaran data rating</span>
+<span class="n">rating</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>J.62DMI00.005.1 - Menelaah Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="n">rating</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>J.62DMI00.008.1 - Membersihkan Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Merubah data rating agar hanya berisi rating pada tempat wisata dari Kota Bandung</span>
+<span class="n">rating</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">rating</span><span class="p">,</span> <span class="n">place</span><span class="p">[[</span><span class="s1">&#39;Place_Id&#39;</span><span class="p">]],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;Place_Id&#39;</span><span class="p">)</span>
+<span class="n">rating</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>J.62DMI00.006.1 - Memvalidasi Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Melihat ukuran dataset rating untuk Kota Bandung</span>
+<span class="n">rating</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div>
+<h4 id="323-data-user">3.2.3. Data user</h4>
+<p><strong>J.62DMI00.007.1 - Menentukan Objek Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Melihat gambaran data user</span>
+<span class="n">user</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>J.62DMI00.008.1 - Membersihkan Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Merubah data user agar hanya berisi user yang pernah mengunjungi wisata di Kota Bandung</span>
+<span class="n">user</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">user</span><span class="p">,</span> <span class="n">rating</span><span class="p">[[</span><span class="s1">&#39;User_Id&#39;</span><span class="p">]],</span> <span class="n">how</span><span class="o">=</span><span class="s1">&#39;right&#39;</span><span class="p">,</span> <span class="n">on</span><span class="o">=</span><span class="s1">&#39;User_Id&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">()</span>
+<span class="n">user</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<p><strong>J.62DMI00.006.1 - Memvalidasi Data</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Melihat dataset user yang pernah memberi rating pada wisata di Kota Bandung</span>
+<span class="n">user</span><span class="o">.</span><span class="n">shape</span>
+</code></pre></div>
+<h2 id="4-eksplorasi-data">4. Eksplorasi Data</h2>
+<div class="highlight"><pre><span></span><code><span class="c1"># Membuat visualisasi jumlah kategori wisata di Kota Bandung</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="s1">&#39;Category&#39;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">place</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perbandingan Jumlah Kategori Wisata di Kota Bandung&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Membuat visualisasi distribusi usia user</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">user</span><span class="p">[</span><span class="s1">&#39;Age&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribusi Usia User&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Membuat visualisasi distribusi harga masuk tempat wisata</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">3</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">boxplot</span><span class="p">(</span><span class="n">place</span><span class="p">[</span><span class="s1">&#39;Price&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Distribusi Harga Masuk Wisata di Kota Bandung&#39;</span><span class="p">,</span> <span class="n">pad</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Memfilter asal kota dari user</span>
+<span class="n">askot</span> <span class="o">=</span> <span class="n">user</span><span class="p">[</span><span class="s1">&#39;Location&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span> <span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;,&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+
+<span class="c1"># Visualisasi asal kota dari user</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">6</span><span class="p">))</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">y</span><span class="o">=</span><span class="n">askot</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Jumlah Asal Kota dari User&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="5-persiapan-data-untuk-pemodelan">5. Persiapan Data untuk Pemodelan</h2>
+<p><strong>J.62DMI00.009.1 - Mengonstruksi Data</strong></p>
+<h3 id="51-membuat-salinan-data-rating">5.1. Membuat Salinan Data rating</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Membaca dataset untuk dilakukan encoding</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">rating</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="52-melakukan-encoding">5.2. Melakukan Encoding</h3>
+<h4 id="521-membuat-fungsi-untuk-melakukan-encoding">5.2.1. Membuat Fungsi untuk Melakukan Encoding</h4>
+<div class="highlight"><pre><span></span><code><span class="k">def</span><span class="w"> </span><span class="nf">dict_encoder</span><span class="p">(</span><span class="n">col</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">df</span><span class="p">):</span>
+    <span class="c1"># Mengubah kolom suatu dataframe menjadi list tanpa nilai yang sama</span>
+    <span class="n">unique_val</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">col</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+
+    <span class="c1"># Melakukan encoding value kolom suatu dataframe ke angka</span>
+    <span class="n">val_to_val_encoded</span> <span class="o">=</span> <span class="p">{</span><span class="n">x</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_val</span><span class="p">)}</span>
+
+    <span class="c1"># Melakukan proses encoding angka ke value dari kolom suatu dataframe</span>
+    <span class="n">val_encoded_to_val</span> <span class="o">=</span> <span class="p">{</span><span class="n">i</span><span class="p">:</span> <span class="n">x</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">x</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_val</span><span class="p">)}</span>
+    <span class="k">return</span> <span class="n">val_to_val_encoded</span><span class="p">,</span> <span class="n">val_encoded_to_val</span>
+</code></pre></div>
+<h4 id="522-encoding-dan-mapping-kolom-user">5.2.2. Encoding dan Mapping Kolom User</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Encoding User_Id</span>
+<span class="n">user_to_user_encoded</span><span class="p">,</span> <span class="n">user_encoded_to_user</span> <span class="o">=</span> <span class="n">dict_encoder</span><span class="p">(</span><span class="s1">&#39;User_Id&#39;</span><span class="p">)</span>
+
+<span class="c1"># Mapping User_Id ke dataframe</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;user&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;User_Id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">user_to_user_encoded</span><span class="p">)</span>
+</code></pre></div>
+<h4 id="523-encoding-dan-mapping-kolom-place">5.2.3. Encoding dan Mapping Kolom Place</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Encoding Place_Id</span>
+<span class="n">place_to_place_encoded</span><span class="p">,</span> <span class="n">place_encoded_to_place</span> <span class="o">=</span> <span class="n">dict_encoder</span><span class="p">(</span><span class="s1">&#39;Place_Id&#39;</span><span class="p">)</span>
+
+<span class="c1"># Mapping Place_Id ke dataframe</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;place&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Place_Id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">place_to_place_encoded</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="53-melihat-gambaran-data-untuk-pemodelan">5.3. Melihat Gambaran Data untuk Pemodelan</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Mendapatkan jumlah user dan place</span>
+<span class="n">num_users</span><span class="p">,</span> <span class="n">num_place</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">user_to_user_encoded</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">place_to_place_encoded</span><span class="p">)</span>
+
+<span class="c1"># Mengubah rating menjadi nilai float</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;Place_Ratings&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Place_Ratings&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">)</span>
+
+<span class="c1"># Mendapatkan nilai minimum dan maksimum rating</span>
+<span class="n">min_rating</span><span class="p">,</span> <span class="n">max_rating</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Place_Ratings&#39;</span><span class="p">]),</span> <span class="nb">max</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Place_Ratings&#39;</span><span class="p">])</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Number of User: </span><span class="si">{</span><span class="n">num_users</span><span class="si">}</span><span class="s1">, Number of Place: </span><span class="si">{</span><span class="n">num_place</span><span class="si">}</span><span class="s1">, Min Rating: </span><span class="si">{</span><span class="n">min_rating</span><span class="si">}</span><span class="s1">, Max Rating: </span><span class="si">{</span><span class="n">max_rating</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><span class="c1"># Mengacak dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="n">frac</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="6-pemodelan-machine-learning-dengan-recommendernet">6. Pemodelan Machine Learning dengan RecommenderNet</h2>
+<p><strong>J.62DMI00.013.1 - Membangun Model</strong></p>
+<h3 id="61-membagi-data-train-dan-test">6.1. Membagi data train dan test</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Membuat variabel x untuk mencocokkan data user dan place menjadi satu value</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s1">&#39;user&#39;</span><span class="p">,</span> <span class="s1">&#39;place&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Membuat variabel y untuk membuat rating dari hasil</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Place_Ratings&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="n">min_rating</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">max_rating</span> <span class="o">-</span> <span class="n">min_rating</span><span class="p">))</span><span class="o">.</span><span class="n">values</span>
+
+<span class="c1"># Membagi menjadi 80% data train dan 20% data validasi</span>
+<span class="n">train_indices</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="mf">0.8</span> <span class="o">*</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">x_train</span><span class="p">,</span> <span class="n">x_val</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_val</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">x</span><span class="p">[:</span><span class="n">train_indices</span><span class="p">],</span>
+    <span class="n">x</span><span class="p">[</span><span class="n">train_indices</span><span class="p">:],</span>
+    <span class="n">y</span><span class="p">[:</span><span class="n">train_indices</span><span class="p">],</span>
+    <span class="n">y</span><span class="p">[</span><span class="n">train_indices</span><span class="p">:]</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 id="62-menyiapkan-model">6.2. Menyiapkan Model</h3>
+<h4 id="621-inisialisasi-fungsi">6.2.1. Inisialisasi Fungsi</h4>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">RecommenderNet</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+    <span class="c1"># Inisialisasi fungsi</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">num_users</span><span class="p">,</span> <span class="n">num_places</span><span class="p">,</span> <span class="n">embedding_size</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">RecommenderNet</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_users</span> <span class="o">=</span> <span class="n">num_users</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_places</span> <span class="o">=</span> <span class="n">num_places</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">embedding_size</span> <span class="o">=</span> <span class="n">embedding_size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_embedding</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span> <span class="c1"># Layer embedding user</span>
+            <span class="n">num_users</span><span class="p">,</span>
+            <span class="n">embedding_size</span><span class="p">,</span>
+            <span class="n">embeddings_initializer</span> <span class="o">=</span> <span class="s1">&#39;he_normal&#39;</span><span class="p">,</span>
+            <span class="n">embeddings_regularizer</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">regularizers</span><span class="o">.</span><span class="n">l2</span><span class="p">(</span><span class="mf">1e-6</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">user_bias</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">num_users</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Layer embedding user bias</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">places_embedding</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span> <span class="c1"># Layer embeddings places</span>
+            <span class="n">num_places</span><span class="p">,</span>
+            <span class="n">embedding_size</span><span class="p">,</span>
+            <span class="n">embeddings_initializer</span> <span class="o">=</span> <span class="s1">&#39;he_normal&#39;</span><span class="p">,</span>
+            <span class="n">embeddings_regularizer</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">regularizers</span><span class="o">.</span><span class="n">l2</span><span class="p">(</span><span class="mf">1e-6</span><span class="p">)</span>
+        <span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">places_bias</span> <span class="o">=</span> <span class="n">layers</span><span class="o">.</span><span class="n">Embedding</span><span class="p">(</span><span class="n">num_places</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="c1"># Layer embedding places bias</span>
+
+    <span class="k">def</span><span class="w"> </span><span class="nf">call</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">inputs</span><span class="p">):</span>
+        <span class="n">user_vector</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_embedding</span><span class="p">(</span><span class="n">inputs</span><span class="p">[:,</span><span class="mi">0</span><span class="p">])</span> <span class="c1"># memanggil layer embedding 1</span>
+        <span class="n">user_bias</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">user_bias</span><span class="p">(</span><span class="n">inputs</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="c1"># memanggil layer embedding 2</span>
+        <span class="n">places_vector</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">places_embedding</span><span class="p">(</span><span class="n">inputs</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span> <span class="c1"># memanggil layer embedding 3</span>
+        <span class="n">places_bias</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">places_bias</span><span class="p">(</span><span class="n">inputs</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">])</span> <span class="c1"># memanggil layer embedding 4</span>
+
+        <span class="n">dot_user_places</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">tensordot</span><span class="p">(</span><span class="n">user_vector</span><span class="p">,</span> <span class="n">places_vector</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="n">dot_user_places</span> <span class="o">+</span> <span class="n">user_bias</span> <span class="o">+</span> <span class="n">places_bias</span>
+
+        <span class="k">return</span> <span class="n">tf</span><span class="o">.</span><span class="n">nn</span><span class="o">.</span><span class="n">sigmoid</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="c1"># activation sigmoid</span>
+</code></pre></div>
+<h4 id="622-inisialisasi-model">6.2.2. Inisialisasi Model</h4>
+<div class="highlight"><pre><span></span><code><span class="n">model</span> <span class="o">=</span> <span class="n">RecommenderNet</span><span class="p">(</span><span class="n">num_users</span><span class="p">,</span> <span class="n">num_place</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span> <span class="c1"># inisialisasi model</span>
+
+<span class="c1"># model compile</span>
+<span class="n">model</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span>
+    <span class="n">loss</span> <span class="o">=</span> <span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">losses</span><span class="o">.</span><span class="n">BinaryCrossentropy</span><span class="p">(),</span>
+    <span class="n">optimizer</span> <span class="o">=</span> <span class="n">keras</span><span class="o">.</span><span class="n">optimizers</span><span class="o">.</span><span class="n">Adam</span><span class="p">(</span><span class="n">learning_rate</span><span class="o">=</span><span class="mf">0.0004</span><span class="p">),</span>
+    <span class="n">metrics</span><span class="o">=</span><span class="p">[</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">metrics</span><span class="o">.</span><span class="n">RootMeanSquaredError</span><span class="p">()]</span>
+<span class="p">)</span>
+</code></pre></div>
+<h4 id="623-inisialisasi-callbacks">6.2.3. Inisialisasi Callbacks</h4>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">myCallback</span><span class="p">(</span><span class="n">tf</span><span class="o">.</span><span class="n">keras</span><span class="o">.</span><span class="n">callbacks</span><span class="o">.</span><span class="n">Callback</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">on_epoch_end</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">epoch</span><span class="p">,</span> <span class="n">logs</span><span class="o">=</span><span class="p">{}):</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">logs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;val_root_mean_squared_error&#39;</span><span class="p">)</span><span class="o">&lt;</span><span class="mf">0.25</span><span class="p">):</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Lapor! Metriks validasi sudah sesuai harapan&#39;</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="o">.</span><span class="n">stop_training</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+<h4 id="624-proses-training">6.2.4. Proses Training</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Memulai training</span>
+<span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">x_train</span><span class="p">,</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">y_train</span><span class="p">,</span>
+    <span class="n">epochs</span> <span class="o">=</span> <span class="mi">100</span><span class="p">,</span>
+    <span class="n">validation_data</span> <span class="o">=</span> <span class="p">(</span><span class="n">x_val</span><span class="p">,</span> <span class="n">y_val</span><span class="p">),</span>
+    <span class="n">callbacks</span> <span class="o">=</span> <span class="p">[</span><span class="n">myCallback</span><span class="p">()]</span>
+<span class="p">)</span>
+</code></pre></div>
+<p><strong>J.62DMI00.014.1 - Mengevaluasi Hasil Pemodelan</strong></p>
+<div class="highlight"><pre><span></span><code><span class="c1"># Menampilkan plot loss dan validation</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;root_mean_squared_error&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">history</span><span class="o">.</span><span class="n">history</span><span class="p">[</span><span class="s1">&#39;val_root_mean_squared_error&#39;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;model_metrics&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;root_mean_squared_error&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;epoch&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylim</span><span class="p">(</span><span class="n">ymin</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">ymax</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">([</span><span class="s1">&#39;train&#39;</span><span class="p">,</span> <span class="s1">&#39;test&#39;</span><span class="p">],</span> <span class="n">loc</span><span class="o">=</span><span class="s1">&#39;center left&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</code></pre></div>
+<h2 id="7-memprediksi-top-7-rekomendasi">7. Memprediksi Top 7 Rekomendasi</h2>
+<h3 id="71-menyiapkan-dataframe-untuk-menampilkan-hasil-rekomendasi">7.1 Menyiapkan DataFrame untuk Menampilkan Hasil Rekomendasi</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Menyiapkan dataframe</span>
+<span class="n">place_df</span> <span class="o">=</span> <span class="n">place</span><span class="p">[[</span><span class="s1">&#39;Place_Id&#39;</span><span class="p">,</span> <span class="s1">&#39;Place_Name&#39;</span><span class="p">,</span> <span class="s1">&#39;Category&#39;</span><span class="p">,</span> <span class="s1">&#39;Rating&#39;</span><span class="p">,</span> <span class="s1">&#39;Price&#39;</span><span class="p">]]</span>
+<span class="n">place_df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">,</span> <span class="s1">&#39;place_name&#39;</span><span class="p">,</span> <span class="s1">&#39;category&#39;</span><span class="p">,</span> <span class="s1">&#39;rating&#39;</span><span class="p">,</span> <span class="s1">&#39;price&#39;</span><span class="p">]</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">rating</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="72-menyiapkan-contoh-user-untuk-menampilkan-rekomendasi">7.2. Menyiapkan contoh User untuk Menampilkan Rekomendasi</h3>
+<h4 id="721-mencari-user">7.2.1 Mencari User</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Mengambil sample user</span>
+<span class="n">user_id</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">User_Id</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<span class="n">place_visited_by_user</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="o">.</span><span class="n">User_Id</span> <span class="o">==</span> <span class="n">user_id</span><span class="p">]</span>
+</code></pre></div>
+<h4 id="722-mencari-lokasi-yang-belum-dikunjungi-user">7.2.2. Mencari Lokasi yang belum Dikunjungi User</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Membuat data lokasi yang belum dikunjungi user</span>
+<span class="n">place_not_visited</span> <span class="o">=</span> <span class="n">place_df</span><span class="p">[</span><span class="o">~</span><span class="n">place_df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">place_visited_by_user</span><span class="o">.</span><span class="n">Place_Id</span><span class="o">.</span><span class="n">values</span><span class="p">)][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+<span class="n">place_not_visited</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span>
+    <span class="nb">set</span><span class="p">(</span><span class="n">place_not_visited</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">place_to_place_encoded</span><span class="o">.</span><span class="n">keys</span><span class="p">()))</span>
+<span class="p">)</span>
+
+<span class="n">place_not_visited</span> <span class="o">=</span> <span class="p">[[</span><span class="n">place_to_place_encoded</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">x</span><span class="p">)]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">place_not_visited</span><span class="p">]</span>
+<span class="n">user_encoder</span> <span class="o">=</span> <span class="n">user_to_user_encoded</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">user_id</span><span class="p">)</span>
+<span class="n">user_place_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">hstack</span><span class="p">(</span>
+    <span class="p">([[</span><span class="n">user_encoder</span><span class="p">]]</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">place_not_visited</span><span class="p">),</span> <span class="n">place_not_visited</span><span class="p">)</span>
+<span class="p">)</span>
+</code></pre></div>
+<h3 id="73-menampilkan-hasil-rekomendasi-untuk-user">7.3. Menampilkan Hasil Rekomendasi untuk User</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Mengambil top 7 recommendation</span>
+<span class="n">ratings</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">user_place_array</span><span class="p">)</span><span class="o">.</span><span class="n">flatten</span><span class="p">()</span>
+<span class="n">top_ratings_indices</span> <span class="o">=</span> <span class="n">ratings</span><span class="o">.</span><span class="n">argsort</span><span class="p">()[</span><span class="o">-</span><span class="mi">7</span><span class="p">:][::</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+<span class="n">recommended_place_ids</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">place_encoded_to_place</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">place_not_visited</span><span class="p">[</span><span class="n">x</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">top_ratings_indices</span>
+<span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Daftar rekomendasi untuk: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;User &#39;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">user_id</span><span class="p">)))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;===&#39;</span> <span class="o">*</span> <span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----&#39;</span> <span class="o">*</span> <span class="mi">15</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Tempat dengan rating wisata paling tinggi dari user&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----&#39;</span> <span class="o">*</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="n">top_place_user</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">place_visited_by_user</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span>
+        <span class="n">by</span> <span class="o">=</span> <span class="s1">&#39;Place_Ratings&#39;</span><span class="p">,</span>
+        <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span>
+    <span class="p">)</span>
+    <span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">Place_Id</span><span class="o">.</span><span class="n">values</span>
+<span class="p">)</span>
+
+<span class="n">place_df_rows</span> <span class="o">=</span> <span class="n">place_df</span><span class="p">[</span><span class="n">place_df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">top_place_user</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">place_df_rows</span><span class="o">.</span><span class="n">itertuples</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">row</span><span class="o">.</span><span class="n">place_name</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">category</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----&#39;</span> <span class="o">*</span> <span class="mi">15</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Top 7 place recommendation&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;----&#39;</span> <span class="o">*</span> <span class="mi">15</span><span class="p">)</span>
+
+<span class="n">recommended_place</span> <span class="o">=</span> <span class="n">place_df</span><span class="p">[</span><span class="n">place_df</span><span class="p">[</span><span class="s1">&#39;id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">recommended_place_ids</span><span class="p">)]</span>
+<span class="k">for</span> <span class="n">row</span><span class="p">,</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">recommended_place</span><span class="o">.</span><span class="n">itertuples</span><span class="p">(),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">8</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;.&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">place_name</span><span class="p">,</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">category</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;Harga Tiket Masuk&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">price</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">,</span> <span class="s1">&#39;Rating Wisata&#39;</span><span class="p">,</span> <span class="n">row</span><span class="o">.</span><span class="n">rating</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;===&#39;</span><span class="o">*</span><span class="mi">15</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="penutup">Penutup</h2>
+<p>Model untuk menampilkan top 7 rekomendasi tempat wisata telah selesai dibuat dan model ini dapat digunakan untuk menampilkan rekomendasi kepada user yang harapannya dapat meningkatkan jumlah wisatawan di Kota Bandung. Namun demikian beberapa pengembangan lain masih dapat dilakukan agar dapat membuat model yang menampilkan rekomendasi yang lebih sesuai dengan kebiasaan pengguna, dll.</p>
+<h2 id="referensi">Referensi</h2>
+<ul>
+<li>Seaborn: https://seaborn.pydata.org/tutorial.html</li>
+<li>Callback: https://www.tensorflow.org/api_docs/python/tf/keras/callbacks/Callback</li>
+<li>Lainnya:<ul>
+<li>https://github.com/AgungP88/getloc-apps/tree/machine-learning</li>
+<li>https://www.kaggle.com/ibtesama/getting-started-with-a-movie-recommendation-system</li>
+<li>https://www.dicoding.com/academies/319
+```</li>
+</ul>
+</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.tabs", "navigation.sections", "navigation.top", "search.highlight", "search.suggest", "search.share", "content.code.copy"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

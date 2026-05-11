@@ -2,18 +2,38 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://rixlux.github.io/Machine-Learning/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-05-11</lastmod>
+    </url>
+    <url>
+         <loc>https://rixlux.github.io/Machine-Learning/Tugas10b/</loc>
+         <lastmod>2026-05-11</lastmod>
+    </url>
+    <url>
+         <loc>https://rixlux.github.io/Machine-Learning/Tugas11/</loc>
+         <lastmod>2026-05-11</lastmod>
+    </url>
+    <url>
+         <loc>https://rixlux.github.io/Machine-Learning/Tugas12/</loc>
+         <lastmod>2026-05-11</lastmod>
+    </url>
+    <url>
+         <loc>https://rixlux.github.io/Machine-Learning/Tugas12_Jobsheet/</loc>
+         <lastmod>2026-05-11</lastmod>
     </url>
     <url>
          <loc>https://rixlux.github.io/Machine-Learning/Tugas4a/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-05-11</lastmod>
     </url>
     <url>
          <loc>https://rixlux.github.io/Machine-Learning/Tugas4b/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-05-11</lastmod>
     </url>
     <url>
          <loc>https://rixlux.github.io/Machine-Learning/Tugas6/</loc>
-         <lastmod>2026-04-04</lastmod>
+         <lastmod>2026-05-11</lastmod>
+    </url>
+    <url>
+         <loc>https://rixlux.github.io/Machine-Learning/jobsheet11-CNNwithMAtLab/</loc>
+         <lastmod>2026-05-11</lastmod>
     </url>
 </urlset>
