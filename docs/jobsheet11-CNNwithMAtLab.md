@@ -143,7 +143,7 @@ accuracy = sum(YPred == YValidation) / numel(YValidation)
 Akurasi adalah pecahan dari label yang diprediksi dengan benar. Dalam kasus ini, akurasi biasanya mencapai lebih dari 99%.
 
 
-## 7.Screenshot Kode Python
+## 7.Screenshot Kode
 
 ![Matlab_Output](Images/Tugas11/CNN1.png)  
 
